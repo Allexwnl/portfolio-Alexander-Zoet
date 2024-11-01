@@ -1,22 +1,6 @@
 body {
-    padding: 0;
     margin: 0;
-    background-color: black; /* Fallback color */
-    position: relative;
-}
-
-body::before {
-    content: ""; /* Required for ::before to work */
-    background-image: url(background.jpg);
-    opacity: 0.8;
-    background-size: cover;
-    background-position: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; /* Cover the full width */
-    height: 100%; /* Cover the full height */
-    z-index: -1; /* Make sure it's behind the content */
+    padding: 0;
 }
 
 
@@ -24,22 +8,9 @@ body::before {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: white;
+    background-color: red;
     position: relative;
     z-index: 1; /* Ensure content is above the overlay */
-    text-shadow: 0 0 5px rgb(152, 152, 152), 0 0 10px rgb(160, 160, 160), 0 0 20px rgb(146, 146, 146), 0 0 30px rgb(172, 172, 172), 0 0 40px rgb(179, 179, 179), 0 0 55px rgb(156, 156, 156), 0 0 75px #676767;
-}
-
-.navbar::before {
-    content: "";
-    position: absolute; /* Make it position relative to .navbar */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* Ensure it covers the full navbar */
-    background-color: black;
-    opacity: 0.2; /* Control the transparency */
-    z-index: -1; /* Place the overlay behind the .navbar content */
 }
 
 
@@ -51,6 +22,7 @@ body::before {
     gap: 20px;
     margin: 0;
     padding: 0;
+    margin-left: 3%;
 }
 
 .namelogo:first-child {
@@ -59,30 +31,50 @@ body::before {
     font-size: large;
 }
 
-ul {
-    list-style: none;
+#name {
+    color: white;
 }
 
-h1 {
-    color: white;
-    text-shadow: 0 0 5px rgb(152, 152, 152), 0 0 10px rgb(160, 160, 160), 0 0 20px rgb(146, 146, 146), 0 0 30px rgb(172, 172, 172), 0 0 40px rgb(179, 179, 179), 0 0 55px rgb(156, 156, 156), 0 0 75px #676767;
+ul {
+    list-style: none;
 }
 
 .socials {
     display: flex;
     flex-direction: row;
+    margin-right: 3%;
+    gap: 10px;
+}
+
+.insta,
+.twitter,
+.bitjelogo a,
+.bitjelogo {
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.insta:hover,
+.twitter:hover,
+.bitjelogo:hover a,
+.bitjelogo:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    text-decoration: none;
 }
 
 .ik {
     display: flex;
     flex-direction: column;
-    
 }
 
 .main-container {
     display: flex;
+    clip-path: polygon(100% 0, 100% 54%, 0 100%, 0 0);
+    background-color: red;
     width: 100%;
     height: 100%;
+    height: 500px;
 }
 
 .typewriter h1,
@@ -92,75 +84,109 @@ h1 {
     z-index: 1;
     position: relative;
     color: white;
-    text-shadow: 0 0 5px rgb(152, 152, 152), 0 0 10px rgb(160, 160, 160), 0 0 20px rgb(146, 146, 146), 0 0 30px rgb(172, 172, 172), 0 0 40px rgb(179, 179, 179), 0 0 55px rgb(156, 156, 156), 0 0 75px #676767;
     margin-left: 4%;    
 }
 
-.typewriter p {
+.typewriter b {
+    display: flex;
     font-size: 20px;
     color: white;
-    text-shadow: 0 0 5px rgb(152, 152, 152), 0 0 10px rgb(160, 160, 160), 0 0 20px rgb(146, 146, 146), 0 0 30px rgb(172, 172, 172), 0 0 40px rgb(179, 179, 179), 0 0 55px rgb(156, 156, 156), 0 0 75px #676767;
     width: 60%;
     margin-left: 4%;
 }
 
-
-
-
-img[alt="ik"] {
-    width: 20%;
-    width: 300px;
-    height: 400px;
-    border-radius: 8px;
-    border: 3px solid white;
-    box-shadow: 0 0 7px 0 #ffffff, 0 0 5px 2px #ffffff, inset 0 0 7px 0 #ffffff, inset 0 0 5px 1px #ffffff;
-
+#knownlang {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    transition: 1s;
 }
 
 .knownlanguage {
-    text-shadow: 0 0 5px rgb(152, 152, 152), 0 0 10px rgb(160, 160, 160), 0 0 20px rgb(146, 146, 146), 0 0 30px rgb(172, 172, 172), 0 0 40px rgb(179, 179, 179), 0 0 55px rgb(156, 156, 156), 0 0 75px #676767;
-    color: white;
-    border: solid 3px white;
+    width: 410px;
+    color: red;
+    border: solid 3px red;
     display: flex;
     flex-direction: column;
-    height: 25%;
+    justify-content: end;
+    height: 75%;
     align-items: center;
     align-content: center;
     border-radius: 8px;
     margin-right: 2%;
+    transition: 1s;
+    font-size: 28px;
+}
+
+.knownlanguage:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.icons {
     transform: scale(1.7);
+    margin-bottom: 3%;
 }
 
 #second {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 500px;
+    height: 100px;
     flex-wrap: wrap;
-    margin-top: 8%;
+}
+
+#second img {
+    width: 190px;
+    clip-path: circle(40%);
+    transition: 2s;
+}
+
+#second img:hover {
+    transform: scale(1.3);
+    transition: 2s;
 }
 
 .me {
     display: flex;
     justify-content: center;
-    text-shadow: 0 0 5px rgb(152, 152, 152), 0 0 10px rgb(160, 160, 160), 0 0 20px rgb(146, 146, 146), 0 0 30px rgb(172, 172, 172), 0 0 40px rgb(179, 179, 179), 0 0 55px rgb(156, 156, 156), 0 0 75px #676767;
     color: white;
     font-size: 44px;
+}
+
+#aboutmesection {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    margin-top: 5%;
 }
 
 #aboutme {
     display: flex;
     flex-direction: row;
     color: white;
-    text-shadow: 0 0 5px rgb(152, 152, 152), 0 0 10px rgb(160, 160, 160), 0 0 20px rgb(146, 146, 146), 0 0 30px rgb(172, 172, 172), 0 0 40px rgb(179, 179, 179), 0 0 55px rgb(156, 156, 156), 0 0 75px #676767;
     justify-content: space-around;
+    background-color: red;
 }
 
 #aboutme p {
     width: 40%;
     display: flex;
     justify-content: flex-end;
-    font-size: 22px;
+    font-size: 26px;
+}
+
+img[alt="designing"] {
+    width: 500px;
+    clip-path: circle(70%);
+    margin-bottom: 3%;
+    transition: 1s;
+}
+
+img[alt="designing"]:hover {
+    transform: scale(1.1);
+    transition: 1s;
 }
 
 #education {
@@ -191,18 +217,17 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border-radius: 8px;
+    border-radius: 20px;
     border: solid 7px white;
     height: 300px;
     width: 40%;
-    box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px rgb(255, 255, 255), inset 0 0 7px rgb(255, 255, 255);
     margin-left: 2%;
-    transition: 1s;
+    transition: 2s;
+    background-color: red;
 }
 
 .bit img {
-    border: solid 3 px;
-    box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px rgb(255, 255, 255), inset 0 0 7px rgb(255, 255, 255);
+    border: solid 3px white;
     border-radius: 8px;
     width: 150px;
     height: 150px;
@@ -213,7 +238,7 @@ a:hover {
 
 .bit:hover {
     transform: scale(1.1);
-    transition: 0.4s;
+    transition: 1s;
 }
 
 .bitimg {
@@ -228,12 +253,77 @@ a:hover {
     justify-content: center;
     width: 400px;
     color: white;
-    text-shadow: 0 0 5px rgb(152, 152, 152), 0 0 10px rgb(160, 160, 160), 0 0 20px rgb(146, 146, 146), 0 0 30px rgb(172, 172, 172), 0 0 40px rgb(179, 179, 179), 0 0 55px rgb(156, 156, 156), 0 0 75px #676767;
 }
 
 .bittext p {
     font-size: 24px;
 }
+
+#certificaten {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  
+  .carousel-item {
+    min-width: 50%;
+    background-color: transparent;
+    border: 3px solid white;
+    box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255), inset 0 0 7px rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgb(152, 152, 152), 0 0 10px rgb(160, 160, 160), 0 0 20px rgb(146, 146, 146), 0 0 30px rgb(172, 172, 172), 0 0 40px rgb(179, 179, 179), 0 0 55px rgb(156, 156, 156), 0 0 75px #676767;
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .bitimgcarousel {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+
 
 ::-webkit-scrollbar-thumb {
     box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px rgb(255, 255, 255), inset 0 0 7px rgb(255, 255, 255);
@@ -251,3 +341,12 @@ a:hover {
     border-radius: 10px;
   }
   
+
+  .clip1 {
+    clip-path: polygon(100% 0, 100% 54%, 0 100%, 0 0);
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    width: 100vw;
+    height: 280px;
+  }

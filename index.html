@@ -4,57 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexander Zoet</title>
+    <title>portefolio</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image" href="Designer.png">
 </head>
 
 <body>
     <nav class="navbar">
         <ul class="namelogo">
-            <li><b>BIT Academy</b></li>
-            <li>
+            <li class="bitjelogo"><a href="https://www.bit-academy.nl/"><b>BIT Academy</b></a></li>
+            <li id="name">
                 <h1>Alexander Zoet</h1>
             </li>
         </ul>
         <ul class="socials">
-            <li><i class='bx bxl-instagram bx-lg'></i></li>
-            <li><i class='bx bxl-tiktok bx-lg'></i></li>
-            <li><i class='bx bxl-twitter bx-lg'></i></li>
+            <li class="insta"><a href="https://www.instagram.com/allexwnl.public/"><i class='bx bxl-instagram bx-lg'></i></a></li>
+            <li class="twitter"><a href="https://x.com/allexwnl"><i class='bx bxl-twitter bx-lg'></i></a></li>
             <li></li>
         </ul>
-    </nav>
+    </nav> 
     <main class="main-container">
         <section class="ik">
         <div class="typewriter">
             <h1 class="typewriter">Alexander Zoet</h1>
             <h2 class="typewriter">Front-end developer</h3>
-            <p>Hi i'm a front-end developer who loves to style the pages and try new designs with the css.
+            <b>Hi i'm a front-end developer who loves to style the pages and try new designs with the css.
                 I'm a student at the BIT Academy and I'm learning to become a front-end developer.
                 If you have any questions or want to work together, feel free to contact me.
-            </p>
+            </b>
         </div>
     </section>
     <section id="second">
-        <div class="knownlanguage">
-            <div>
-                <h1>known languages</h1>
-            </div>
-            <div>
-                <i class='bx bxl-html5 bx-lg' ></i>
-                <i class='bx bxl-javascript bx-lg' ></i>
-                <i class='bx bxl-css3 bx-lg' ></i>
-                <i class='bx bxl-bootstrap bx-lg' ></i>
-            </div>
-        </div>
+        <img src="ik.jpg" alt="">
     </section>
 </main>
+
+<section id="knownlang">
+    <div class="knownlanguage">
+        <div>
+            <h1>known languages</h1>
+        </div>
+        <div class="icons">
+            <i class='bx bxl-html5 bx-lg' ></i>
+            <i class='bx bxl-javascript bx-lg' ></i>
+            <i class='bx bxl-css3 bx-lg' ></i>
+            <i class='bx bxl-bootstrap bx-lg' ></i>
+        </div>
+    </div>
+</section>
+
+<section id="aboutmesection">
 <h1 class="me">about me</h1>
-<section id="aboutme">
-<img src="ik.jpg" alt="ik">
+<div id="aboutme">
 <p>I am Alexander Zoet 17 years old from the netherlands I study at the BIT Academy to become a front-end software developer.
     I love to learn new things and try new things. I'm a very curious person and I especialy love to learn new ccs methods and sometimes a lil bit of javascript.
     designing websites and making animations for them is my specialty. One of the things i especialy want to learn/understand is javascript because
@@ -63,6 +68,8 @@
     learn/how to use it. If you have any questions or want to work together, feel free to contact me.
 
 </p>
+<img src="twitter-1522890_1920.jpg" alt="designing">
+</div>
 </section>
 <section>
     <h1 class="edu">education</h1>
@@ -88,6 +95,39 @@
         </div>
     </div>
 </div>
+</section>
+<section id="certificaten">
+    <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-item">
+            <img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt="">
+        </div>
+          <div class="carousel-item">
+            <img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt="">
+        </div>
+          <div class="carousel-item">
+            <img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt="">
+        </div>
+          <div class="carousel-item">
+            <img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt="">
+        </div>
+          <div class="carousel-item">
+            <img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt="">
+        </div>
+          <div class="carousel-item"><img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt=""></div>
+          <div class="carousel-item"><img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt=""></div>
+          <div class="carousel-item"><img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt=""></div>
+          <div class="carousel-item"><img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt=""></div>
+          <div class="carousel-item"><img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt=""></div>
+          <div class="carousel-item"><img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt=""></div>
+          <div class="carousel-item"><img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt=""></div>
+          <div class="carousel-item"><img class="bitimgcarousel" src="bit-academy-R3mAMn41.jpg" alt=""></div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+      </div>
+      
+      <script src="script.js"></script>
 </section>
 </body>
 
