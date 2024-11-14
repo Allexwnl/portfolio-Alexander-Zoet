@@ -1,42 +1,19 @@
-let index = 0;
-let autoSlide;
+const buttons = document.querySelectorAll("[data-carousel-button]")
 
-function showSlide(n) {
-  const slides = document.querySelectorAll('.carousel-item');
-  const maxIndex = slides.length - 2;  // Aangepast om 2 kaarten tegelijk te tonen
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]")
 
-  if (n > maxIndex) {
-    index = 0; // Ga terug naar het begin als de index de limiet overschrijdt
-  } else if (n < 0) {
-    index = maxIndex; // Ga naar de laatste set van 2 kaarten
-  } else {
-    index = n;
-  }
+    const activeSlide = slides.querySelector("[data-active]")
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
 
-  const offset = -index * 50;  // Aangepast naar 50% voor 2 kaarten tegelijk
-  document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
-}
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+  })
+})
 
-function nextSlide() {
-  showSlide(index + 2);  // Aangepast om 2 stappen vooruit te gaan
-}
-
-function prevSlide() {
-  showSlide(index - 2);  // Aangepast om 2 stappen terug te gaan
-}
-
-function startAutoSlide() {
-  autoSlide = setInterval(() => {
-    nextSlide();
-  }, 3000);
-}
-
-document.querySelector('.carousel-container').addEventListener('mouseover', () => {
-  clearInterval(autoSlide);
-});
-
-document.querySelector('.carousel-container').addEventListener('mouseout', () => {
-  startAutoSlide();
-});
-
-startAutoSlide();
