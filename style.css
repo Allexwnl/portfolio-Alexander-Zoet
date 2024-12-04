@@ -76,11 +76,10 @@ ul {
 
 .main-container {
     display: flex;
-    clip-path: polygon(100% 0, 100% 54%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 64%, 0 100%, 0 0);
     background-color: red;
     width: 100%;
-    height: 100%;
-    height: 500px;
+    height: 700px;
 }
 
 .typewriter h1,
@@ -95,7 +94,7 @@ ul {
 
 .typewriter b {
     display: flex;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
     width: 60%;
     margin-left: 4%;
@@ -148,19 +147,21 @@ ul {
 #second {
     display: flex;
     justify-content: center;
-    width: 100%;
     height: 100px;
     flex-wrap: wrap;
 }
 
 #second img {
-    width: 190px;
+    width: 800px;
+    object-fit: fill;
     clip-path: circle(40%);
     transition: 2s;
+    margin-bottom: 900px;
+    margin-right: 100px;
 }
 
 #second img:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
     transition: 2s;
 }
 
@@ -285,7 +286,8 @@ a {
 }
 
 
-#projects {
+#projects,
+#certificatess {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -307,12 +309,13 @@ a {
     margin-right: 1%;
     background-color: red;
     border-radius: 20px;
-    height: 300px;
+    height: 350px;
     margin-left: 5.5%;
+    margin-bottom: 3%;
 }
 
 .carouselimg {
-    margin-top: 5%;
+    margin-top: 2%;
     display: flex;
     align-items: center;
     justify-content:center;
@@ -356,6 +359,10 @@ a {
 #certificatebutton:hover {
     transform: scale(1.2);
     transition: 1s;
+}
+
+#projectbtn {
+    top: 2400px;
 }
 
 footer {
