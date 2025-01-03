@@ -1,0 +1,15 @@
+[
+    { "id": 1, "title": "Front-end Rookie", "link": "certificaten/Front-end Rookie.pdf" },
+    { "id": 2, "title": "Bootstrap", "link": "certificaten/Bootstrap.pdf" },
+    { "id": 3, "title": "HTML/CSS Beginner", "link": "certificaten/HTML_CSS Beginner.pdf" },
+    { "id": 4, "title": "HTML/CSS Advanced", "link": "certificaten/HTML_CSS Advanced.pdf" },
+    { "id": 5, "title": "HTML Pro", "link": "certificaten/HTML Pro.pdf" },
+    { "id": 6, "title": "CSS Pro", "link": "certificaten/CSS Pro.pdf" },
+    { "id": 7, "title": "JavaScript Beginner", "link": "certificaten/JavaScript Beginner.pdf" },
+    { "id": 8, "title": "JavaScript Novice", "link": "certificaten/JavaScript Novice.pdf" },
+    { "id": 9, "title": "JavaScript Pro", "link": "certificaten/JavaScript Pro.pdf" },
+    { "id": 10, "title": "Command Line", "link": "certificaten/Command line.pdf" },
+    { "id": 11, "title": "MySQL Beginner", "link": "certificaten/MySQL Beginner.pdf" },
+    { "id": 11, "title": "PHP Beginner", "link": "certificaten/PHP Beginner.pdf" },
+    { "id": 12, "title": "Scrum", "link": "certificaten/Scrum.pdf" }
+]

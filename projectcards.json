@@ -1,0 +1,6 @@
+[
+    {"id": 1, "title": "Michelle's portfolio", "description": "Dit is een website die ik voor een klant heb gemaakt. Ze wou een website waar ze haar ervaring en projecten kon delen",
+    "url": "https://michellejonk.github.io/persoonlijk-portfolio/", "img": "img/michelle.png"},
+    {"id":2, "title": "Kerremus of live", "description": "This my own version of game of live that i made with classmates. I did the CSS and HTMl.",
+    "url": "https://github.com/MatsvanSplunter/kerremus-deepdive", "img":"img/kerremus.jpg"}
+]

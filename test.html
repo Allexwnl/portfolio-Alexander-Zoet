@@ -4,14 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+button {
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+button span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+button:hover span {
+  transform: translateY(-100%);
+}
+
+button:before {
+  content: 'Hovered!';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  transition: top 0.3s ease;
+}
+
+button:hover:before {
+  top: 0;
+}
+
+
+</style>
 <body>
-    <div>
-    </div>
-    <div class="clip1"></div>
-<div></div>
-<div></div>
-<div></div>
+    <button>hiiiiiiii</button>
 </body>
 </html>
