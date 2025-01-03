@@ -1,45 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
     function Components() {
         const navbarhtml = `
-  <nav id="navbar">
-        <div class="nav-header">
-            <strong>Alexander Zoet</strong>
-        </div>
-        <div id="hamburgermenu">
-            <div id="navigatie">
-                <button id="menu-toggle" class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <ul id="nav-links" class="nav-links">
-                <li>
-                    <p><a href="index.html">HOME</a></p>
-                </li>
-                <li>
-                    <p><a href="index.html#aboutme">OVER MIJ</a></p>
-                </li>
-                <li>
-                    <p><a href="index.html#projecten">PROJECTEN</a></p>
-                </li>
-                <li>
-                    <p><a href="index.html#contact">CONTACT</a></p>
-                </li>
-            </ul>
-        </div>
-  </nav>`;
+            <nav id="navbar">
+                <div class="nav-header">
+                    <strong>Alexander Zoet</strong>
+                </div>
+                <div id="hamburgermenu">
+                    <div id="navigatie">
+                        <button id="menu-toggle" class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <ul id="nav-links" class="nav-links">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="index.html#overmij">OVER MIJ</a></li>
+                        <li><a href="index.html#hrsplit2">PROJECTEN</a></li>
+                        <li><a href="index.html#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>`;
 
         const navbarContainer = document.getElementById("navbarcontainer");
         if (navbarContainer) {
             navbarContainer.innerHTML = navbarhtml;
         }
+
         // Toggle nav-links visibility
         document.getElementById("menu-toggle").addEventListener("click", function () {
             const navLinks = document.getElementById("nav-links");
             navLinks.classList.toggle("show");
         });
+
+        // Close the menu when a link is clicked
+        const navLinks = document.querySelectorAll('#nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                const navLinksContainer = document.getElementById("nav-links");
+                navLinksContainer.classList.remove("show");
+            });
+        });
     }
+
     Components();
 
     let currentIndex = 1; // Start bij de eerste echte kaart
@@ -159,11 +162,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const cardElement = document.createElement('div');
                 cardElement.classList.add('project-card');
                 cardElement.innerHTML = `
-        <img src="${card.img}">
-        <h2>${card.title}</h2>
-        <p>${card.description}</p>
-        <a href="${card.url}" target="_blank">Zie project</a>
-        `;
+                    <img src="${card.img}">
+                    <h2>${card.title}</h2>
+                    <p>${card.description}</p>
+                    <a href="${card.url}" target="_blank">Zie project</a>
+                `;
                 document.getElementById('projects-container').appendChild(cardElement);
             });
         })
