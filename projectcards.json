@@ -4,5 +4,7 @@
     {"id":2, "title": "Kerremus of live", "description": "Voor een schoolproject heb ik met een team Kerremus of Life ontwikkeld, een replica van Game of Life. Ik was verantwoordelijk voor de HTML- en CSS-structuur, met focus op een responsive en intuïtief ontwerp.",
     "url": "https://github.com/MatsvanSplunter/kerremus-deepdive", "img":"img/kerremus.jpg"},
     {"id":3, "title": "Johan's portfolio", "description": "Dit is een website die ik voor een klant heb gemaakt. Hij wou een website waar je zijn certificaten kon zien en zijn porjecten kon delen.",
-    "url": "https://johndaboy.github.io/Portfolio-Johan-Tol/", "img": "img/johanpf.jpg"}
+    "url": "https://johndaboy.github.io/Portfolio-Johan-Tol/", "img": "img/johanpf.jpg"},
+    {"id":4, "title": "DTT Assesment opdracht", "description": "Dit is een stage Intake opdracht die ik moest maken ik had de opdracht bijna af ik miste een paar functies, maar ik vond het zonde om deze opdracht niet op github te zetten.",
+    "url": "https://github.com/Allexwnl/DTT-Stage-IntakeOpdracht", "img": "img/DTT.png" }
 ]
