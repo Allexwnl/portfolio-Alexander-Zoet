@@ -7,4 +7,6 @@
     "url": "https://johndaboy.github.io/Portfolio-Johan-Tol/", "img": "img/johanpf.jpg"},
     {"id":4, "title": "DTT Assesment opdracht", "description": "Dit is een stage Intake opdracht die ik moest maken ik had de opdracht bijna af ik miste een paar functies, maar ik vond het zonde om deze opdracht niet op github te zetten.",
     "url": "https://github.com/Allexwnl/DTT-Stage-IntakeOpdracht", "img": "img/DTT.png" }
+    ,{"id":5, "title":"HJC", "description":"dit is een component website waar je componenten kan copieren en plakken in je project dit project had ik gemaakt omdat ik vaak mn code opnieuw moest schrijven als ik een nieuw project begon.", "url": "https://hjc-components.netlify.app/",
+    "img": "img/HJC.jpg"}
 ]
